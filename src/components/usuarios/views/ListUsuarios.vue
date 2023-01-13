@@ -57,7 +57,6 @@ export default {
   methods: {
     getUsuarios() {
       userService.getUsuarios().then((e) => (this.usuarios = e));
-      // console.log(this.usuarios);
     },
   },
 };
