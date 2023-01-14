@@ -1,6 +1,8 @@
 <template>
   <h3>Lista de Frutas</h3>
 
+  <router-link to="/agregar">Agregar Fruta</router-link>
+
   <div class="container">
     <div class="row">
       <div class="col-md-12">
@@ -25,13 +27,13 @@
                     <i
                       class="bi bi-x-square"
                       aria-hidden="true"
-                      @click="eliminarUsuario(usuario.id)"
+                      @click="eliminarUsuario(fruta.id)"
                     ></i>
 
                     <i
                       class="fa fa-edit"
                       aria-hidden="true"
-                      @click="editarUsuario(usuario.id)"
+                      @click="editarUsuario(fruta.id)"
                     ></i>
                   </td>
                 </tr>
@@ -63,7 +65,7 @@ export default {
   },
   methods: {
     getData() {
-      frutaService.getFrutas().then((e) => console.log(e));
+      frutaService.getFrutas().then((e) => (this.frutas = e));
     },
   },
 };
