@@ -18,7 +18,7 @@ export default {
   },
   methods: {
     getData() {
-      frutaService.getFrutas().then((e) => (this.frutas = e));
+      // frutaService.getFrutas().then((e) => (this.frutas = e));
     },
   },
 };

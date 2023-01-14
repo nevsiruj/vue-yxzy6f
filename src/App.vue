@@ -2,15 +2,13 @@
   <div id="app">
     <!-- <HelloWorld msg="Welcome to Your Vue.js App" /> -->
     <!-- <ListUsuarios /> -->
-    <!-- <ListFrutas /> -->
-    <router-view />
+    <ListFrutas />
   </div>
 </template>
 
 <script>
 // import HelloWorld from './components/HelloWorld.vue';
 import ListUsuarios from './components/usuarios/views/ListUsuarios.vue';
-
 import ListFrutas from './components/frutas/views/ListFrutas.vue';
 
 export default {
