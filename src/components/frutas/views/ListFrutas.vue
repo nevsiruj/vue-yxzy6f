@@ -1,8 +1,18 @@
 <template>
   <h3>Lista de Frutas</h3>
 
-  <router-link to="/agregar">Agregar Fruta</router-link>
+  <!-- <router-link to="/agregar">Agregar Fruta</router-link> -->
 
+  <!-- Button trigger modal -->
+  <button
+    type="button"
+    class="btn btn-primary"
+    data-bs-toggle="modal"
+    data-bs-target="#exampleModal"
+  >
+    Launch demo modal
+  </button>
+  <FrutaForm />
   <div class="container">
     <div class="row">
       <div class="col-md-12">
@@ -48,12 +58,17 @@
 
 <script>
 import FrutaService from '../services/fruta.service.js';
+import FrutaForm from './FrutaForm.vue';
+
 const frutaService = new FrutaService();
 
 export default {
   name: 'ListFrutas',
   props: {
     msg: String,
+  },
+  component: {
+    FrutaForm,
   },
   created() {
     this.getData();
