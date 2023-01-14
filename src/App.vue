@@ -11,6 +11,7 @@
 // import HelloWorld from './components/HelloWorld.vue';
 import ListUsuarios from './components/usuarios/views/ListUsuarios.vue';
 import ListFrutas from './components/frutas/views/ListFrutas.vue';
+import FormFruta from './components/frutas/views/ListFrutas.vue';
 
 export default {
   name: 'App',
@@ -18,6 +19,7 @@ export default {
     // HelloWorld,
     // ListUsuarios,
     ListFrutas,
+    FormFruta,
   },
 };
 </script>

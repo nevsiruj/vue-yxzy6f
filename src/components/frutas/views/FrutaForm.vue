@@ -33,11 +33,9 @@
             />
           </div>
         </form>
-        <div class="text-center">
-          <button type="button" class="btn btn-primary" @click="submitForm">
-            {{ modo === 'agregar' ? 'Agregar' : 'Editar' }}
-          </button>
-        </div>
+        <button type="button" class="btn btn-primary mt-3" @click="submitForm">
+          {{ modo === 'agregar' ? 'Agregar' : 'Editar' }}
+        </button>
       </div>
     </div>
   </div>
@@ -54,7 +52,8 @@ export default {
   },
   data() {
     return {
-      frutas: [],
+      fruta: {},
+      modo: 'agregar',
     };
   },
   methods: {

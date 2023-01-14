@@ -1,7 +1,7 @@
 <template>
   <h3>Lista de Frutas</h3>
 
-  <!-- <router-link to="/agregar">Agregar Fruta</router-link> -->
+  <router-link to="/agregar">Agregar Fruta</router-link>
 
   <div class="container">
     <div class="row">
