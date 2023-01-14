@@ -10,7 +10,7 @@
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Fruta form</h1>
           <button
             type="button"
             class="btn-close"
@@ -18,7 +18,51 @@
             aria-label="Close"
           ></button>
         </div>
-        <div class="modal-body">...</div>
+        <div class="modal-body">
+          <div class="container">
+            <router-link to="/" class="text-right">Volver</router-link>
+            <div class="card">
+              <div class="card-body">
+                <form>
+                  <div class="form-group">
+                    <label for="nombre">Nombre</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="nombre"
+                      v-model="fruta.nombre"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="color">Color</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="color"
+                      v-model="fruta.color"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="fechaVencimiento">Fecha de Vencimiento</label>
+                    <input
+                      type="date"
+                      class="form-control"
+                      id="fechaVencimiento"
+                      v-model="fruta.fechaVencimiento"
+                    />
+                  </div>
+                </form>
+                <!-- <button
+                  type="button"
+                  class="btn btn-primary mt-3"
+                  @click="submitForm"
+                >
+                  {{ modo === 'agregar' ? 'Agregar' : 'Editar' }}
+                </button> -->
+              </div>
+            </div>
+          </div>
+        </div>
         <div class="modal-footer">
           <button
             type="button"
@@ -27,13 +71,13 @@
           >
             Close
           </button>
-          <button type="button" class="btn btn-primary">Save changes</button>
+          <button type="button" class="btn btn-primary">Guardar</button>
         </div>
       </div>
     </div>
   </div>
 
-  <div class="container">
+  <!-- <div class="container">
     <h3 class="text-center">Fruta form</h3>
     <router-link to="/" class="text-right">Volver</router-link>
     <div class="card">
@@ -72,7 +116,7 @@
         </button>
       </div>
     </div>
-  </div>
+  </div> -->
 </template>
 
 <script>

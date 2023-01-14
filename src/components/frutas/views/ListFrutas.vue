@@ -12,7 +12,9 @@
   >
     Launch demo modal
   </button>
-  <FrutaForm />
+
+  <FrutaForm ref="modal"></FrutaForm>
+
   <div class="container">
     <div class="row">
       <div class="col-md-12">
@@ -67,7 +69,7 @@ export default {
   props: {
     msg: String,
   },
-  component: {
+  components: {
     FrutaForm,
   },
   created() {
