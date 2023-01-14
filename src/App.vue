@@ -2,7 +2,8 @@
   <div id="app">
     <!-- <HelloWorld msg="Welcome to Your Vue.js App" /> -->
     <!-- <ListUsuarios /> -->
-    <ListFrutas />
+    <!-- <ListFrutas /> -->
+    <router-view />
   </div>
 </template>
 

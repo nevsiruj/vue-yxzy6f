@@ -1,6 +1,6 @@
 import { createWebHistory, createRouter } from 'vue-router';
-import ListFrutas from '../components/frutas/views/ListFrutas.vue';
-import FrutaForm from '../components/frutas/views/FrutaForm.vue';
+import ListFrutas from './components/frutas/views/ListFrutas.vue';
+import FrutaForm from './components/frutas/views/FrutaForm.vue';
 
 const routes = [
   {
