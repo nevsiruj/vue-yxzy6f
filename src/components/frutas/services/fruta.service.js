@@ -1,15 +1,24 @@
 export class FrutaService {
-  constructor() {}
+  constructor() {
+    this.FrutaAPI = 'https://localhost:44308';
+  }
 
   async getFrutas() {
     try {
-      const response = await fetch('https://localhost:44308/api/Fruta');
+      const response = await fetch(`${fruta.FrutaAPI}/api/Fruta`);
       const data = await response.json();
       return data;
     } catch (error) {
       throw new Error(error);
     }
   }
+
+  async postFruta(fruta) {
+    await fetch('https://localhost:44308/api/Fruta', {
+    method: 'POST',
+    body: JSON.stringify(fruta)
+    });
+    }
 }
 
 export default FrutaService;

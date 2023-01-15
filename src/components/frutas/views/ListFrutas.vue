@@ -1,19 +1,7 @@
 <template>
   <h3>Lista de Frutas</h3>
 
-  <!-- <router-link to="/agregar">Agregar Fruta</router-link> -->
-
-  <!-- Button trigger modal -->
-  <button
-    type="button"
-    class="btn btn-primary"
-    data-bs-toggle="modal"
-    data-bs-target="#exampleModal"
-  >
-    Launch demo modal
-  </button>
-
-  <FrutaForm ref="modal"></FrutaForm>
+  <router-link to="/agregar">Agregar Fruta</router-link>
 
   <div class="container">
     <div class="row">
