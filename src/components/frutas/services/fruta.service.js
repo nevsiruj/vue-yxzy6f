@@ -5,7 +5,7 @@ export class FrutaService {
 
   async getFrutas() {
     try {
-      const response = await fetch(`${fruta.FrutaAPI}/api/Fruta`);
+      const response = await fetch(`${this.FrutaAPI}/api/Fruta`);
       const data = await response.json();
       return data;
     } catch (error) {
@@ -15,10 +15,10 @@ export class FrutaService {
 
   async postFruta(fruta) {
     await fetch('https://localhost:44308/api/Fruta', {
-    method: 'POST',
-    body: JSON.stringify(fruta)
+      method: 'POST',
+      body: JSON.stringify(fruta),
     });
-    }
+  }
 }
 
 export default FrutaService;

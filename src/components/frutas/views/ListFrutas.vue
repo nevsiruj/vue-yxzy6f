@@ -15,6 +15,7 @@
                   <th>Nombre</th>
                   <th>Color</th>
                   <th>Fecha de Vencimiento</th>
+                  <th>Acciones</th>
                 </tr>
               </thead>
               <tbody>
@@ -22,10 +23,14 @@
                   <td>{{ fruta.id }}</td>
                   <td>{{ fruta.nombre }}</td>
                   <td>{{ fruta.color }}</td>
-                  <td>{{ fruta.fechaVencimiento }}</td>
+                  <td>
+                    {{ new Date(fruta.fechaVencimiento).toLocaleDateString() }}
+                  </td>
                   <td>
                     <i
-                      class="bi bi-x-square"
+                      class="m-1"
+                      style="color: red"
+                      class="fa fa-trash-alt"
                       aria-hidden="true"
                       @click="eliminarUsuario(fruta.id)"
                     ></i>
@@ -72,6 +77,9 @@ export default {
     getData() {
       frutaService.getFrutas().then((e) => (this.frutas = e));
     },
+    eliminarUsuario(){
+      
+    }
   },
 };
 </script>
