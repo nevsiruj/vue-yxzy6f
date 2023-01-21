@@ -49,6 +49,11 @@
       </div>
     </div>
   </div>
+
+  <div class="ticket">
+  
+  </div>
+  <a @click="print()" style="cursor: pointer"> Print </a>
 </template>
 
 <script>
@@ -77,9 +82,23 @@ export default {
     getData() {
       frutaService.getFrutas().then((e) => (this.frutas = e));
     },
-    eliminarUsuario(){
-      
-    }
+    eliminarUsuario() {},
+    print() {
+      window.print();
+    },
   },
 };
 </script>
+
+<style>
+@page {
+  size: auto;
+  margin: 0;
+}
+
+.ticket {
+  width: 57mm;
+  height: auto;
+  overflow: hidden;
+}
+</style>
